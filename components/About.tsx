@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import {
   FaChartLine,
@@ -80,6 +81,19 @@ const About: React.FC = () => {
             Your ultimate companion for navigating the volatility of synthetic
             markets
           </p>
+          <div className="mt-3 w-full flex  justify-center">
+            <Image
+              className="rounded-full"
+              src={"/dicky.jpg"}
+              alt="profile"
+              width={200}
+              height={200}
+            ></Image>
+          </div>
+          {/* <div className="w-1/4">
+              <div className="h-4 bg-amber-300 rounded-t-2xl"></div>
+              <div className="h-20 bg-amber-700"></div>
+            </div> */}
         </div>
 
         {/* Main Content Grid */}
@@ -189,7 +203,7 @@ const About: React.FC = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500 transition-all hover:-translate-y-1"
+                className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-indigo-500 transition-all hover:-translate-y-3"
               >
                 <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center text-indigo-400 mb-4">
                   {feature.icon}
@@ -222,7 +236,7 @@ const About: React.FC = () => {
               Join thousands of traders who trust our platform for their
               synthetic indices trading journey
             </p>
-            <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
+            <button className="bg-white cursor-pointer text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
               Start Trading Smarter
             </button>
           </div>
